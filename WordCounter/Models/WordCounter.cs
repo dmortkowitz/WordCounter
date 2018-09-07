@@ -1,6 +1,5 @@
 using System; 
 using System.Collections.Generic; 
-
 namespace WordCounter.Models
 {
   public class RepeatCounter
@@ -26,12 +25,20 @@ namespace WordCounter.Models
     {
       return inputSentence;
     }
-      public string[] SplitSentence()
+    public string[] SplitSentence()
     {
       string[] array = inputSentence.Split(' ');
       return array;
     }
 
-
+    public int Count()
+    {
+      string[] array = SplitSentence();
+      for(int i = 0; i > array.Length - 1; i++)
+    {
+      inputCount += (inputWord == array[i]) ? 1 : 0;
+    }
+      return inputCount;
+    }
   }
 }
