@@ -4,41 +4,43 @@ namespace WordCounter.Models
 {
   public class RepeatCounter
   {
-    private string inputWord; 
-    private string inputSentence;
-    private int inputCount;
+    private string _inputWord; 
+    private string _inputSentence;
+  
     public RepeatCounter(string inputWord, string inputSentence)
-    {}
+    {
+      _inputWord = inputWord;
+      _inputSentence = inputSentence;
+    }
     public void UserWord(string enteredWord)
     {
-      inputWord = enteredWord;
+      _inputWord = enteredWord;
     }
     public string ReturnWord()
     {
-      return inputWord;
+      return _inputWord;
     }
     public void UserSentence(string enteredSentence)
     {
-      inputSentence = enteredSentence;
+      _inputSentence = enteredSentence;
     }
     public string ReturnSentence()
     {
-      return inputSentence;
+      return _inputSentence;
     }
     public string[] SplitSentence()
     {
-      string[] array = inputSentence.Split(' ');
-      return array;
+      string[] arrayContent = _inputSentence.Split(' ');
+      return arrayContent;
     }
 
-    public int Count()
+    public int userCount()
     {
-      string[] array = SplitSentence();
-      for(int i = 0; i > array.Length - 1; i++)
-    {
-      inputCount += (inputWord == array[i]) ? 1 : 0;
-    }
-      return inputCount;
+      string[] arrayContent = this.SplitSentence();
+      int arrayCount = 0;
+      foreach(string word in arrayContent)
+        arrayCount = (word.Equals(_inputWord) ? ++arrayCount:arrayCount);
+      return arrayCount;
     }
   }
 }

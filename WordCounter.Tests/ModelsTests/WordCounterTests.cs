@@ -12,23 +12,23 @@ namespace WordCounter.Models
     public void CheckWord_InputWord_String()
     {
     //Arrange
-    RepeatCounter userInput = new RepeatCounter("chewy.", "chewy is a rambunctious dog");
+    RepeatCounter userInput = new RepeatCounter("chewy", "chewy is a rambunctious dog");
     //Act
-    string inputWord = userInput.ReturnWord();
+    string testWord = userInput.ReturnWord();
     //Assert
-    Assert.AreEqual("chewy", inputWord);
+    Assert.AreEqual("chewy", testWord);
     }
 
     // test2
     [TestMethod]
-    public void CheckBlank_ReturnInput_String()
+    public void CheckCountk_ReturnCount_Int()
     {
     //Arrange
-    RepeatCounter userInput = new RepeatCounter("", "");
+    RepeatCounter userInput = new RepeatCounter("chewy", "chewy is a very chewy dog");
     //Act
-    string inputWord = userInput.ReturnWord();
+    int inputCount = userInput.userCount();
     //Assert
-    Assert.AreEqual("chewy", inputWord);
+    Assert.AreEqual(2, inputCount);
     }
   }
 }
