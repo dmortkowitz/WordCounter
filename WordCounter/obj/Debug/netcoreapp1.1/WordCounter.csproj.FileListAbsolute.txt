@@ -1,4 +1,6 @@
 /Users/David/Desktop/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp1.1/WordCounter.deps.json
+/Users/David/Desktop/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp1.1/WordCounter.runtimeconfig.json
+/Users/David/Desktop/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp1.1/WordCounter.runtimeconfig.dev.json
 /Users/David/Desktop/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp1.1/WordCounter.dll
 /Users/David/Desktop/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp1.1/WordCounter.pdb
 /Users/David/Desktop/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp1.1/WordCounter.csprojResolveAssemblyReference.cache

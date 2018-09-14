@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Word Count</title>
+    <link href='~/wwwroot/css/bootstrap.css' rel='stylesheet'>
+  </head>
+  <body class="container">
+    <h1>Word Counter</h1><br>
+      <p>Enter the word you would like counted</p>
+      <p>Type in a sentence containing that word, or multiples of that word.</p>
+      <p>Submit your sentence for results.</p>
+    <h4>Program Inputs</h4>
+    <form action="/wordcounter/result" method="post">
+      <label for="userWord">Key Word
+          <input id="userWord" name="userWord" class="form-control" type="text" required><br>
+      </label><br>
+      <label for="string">Target 
+          <input id="userString" name="userString" class="form-control" type="text" required><br>
+      </label><br>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </body>
+</html>

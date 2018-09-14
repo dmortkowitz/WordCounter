@@ -1,7 +1,7 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace FriendLetter {
+namespace WordCounter {
   public class Program {
     public static void Main (string[] args) {
       var host = new WebHostBuilder ()
@@ -10,6 +10,7 @@ namespace FriendLetter {
         .UseIISIntegration ()
         .UseStartup<Startup> ()
         .Build ();
+
       host.Run ();
     }
   }
