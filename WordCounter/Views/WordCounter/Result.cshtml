@@ -5,12 +5,17 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
   </head>
-  <body class="container">
-    <p>Word count results:</p>
-    <p>Input check: @Model["Message"]</p>
-    <p>Count Result: @Model["Result"]</p>
-    <br>
-    <a href="/">Back to homepage.</a><br>
-    <a href="/wordcounter">Reset</a>
+  <body>
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-body" id="wordResult">
+        <p>Your word count results are here!</p>
+        <p>Your count of word is: @Model["Result"]</p>
+        <br>
+        <a href="/">Back to homepage.</a><br>
+        <a href="/wordcounter">Reset</a>
+      </div>
+    </div>
+    </div>
   </body>
 </html>

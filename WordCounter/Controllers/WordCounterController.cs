@@ -13,13 +13,13 @@ namespace WordCounter.Controllers {
     }
     [HttpPost ("/wordcounter/result")]
     public ActionResult Result() {
-      string userWord = Request.Form["inputWord"];
-      string userSentence = Request.Form["inputSentence"];
-
-      RepeatCounter newRepeatCounter = new RepeatCounter (userWord, userSentence);
-      int count = newRepeatCounter.userCount();
+      string inputWord = Request.Form["inputWord"];
+      string inputSentence = Request.Form["inputSentence"];
+      Dictionary<string,object> Result = new Dictionary<string,object>{};
+      
+      Result.Add("Result", RepeatCounter.userCount(inputWord,inputSentence));
       {
-      return View ("Result", newRepeatCounter);
+      return View (Result);
       }
     }
   }

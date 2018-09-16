@@ -1,38 +1,30 @@
 using System;
 using System.Collections.Generic;
 
-namespace WordCounter.Models 
-{
-  public class RepeatCounter 
-  {
-    private string _inputWord;
-    private string _inputSentence;
+namespace WordCounter.Models {
+  public class RepeatCounter {
 
-    public RepeatCounter (string inputWord, string inputSentence) {
-      _inputWord = inputWord;
-      _inputSentence = inputSentence;
+    public static bool wordChecker (string inputWord, string inputSentence) {
+      string testWord = inputWord;
+      string testSentence = inputSentence;
+      string[] testArray = testSentence.Split(' ');
+      for (int i=0; i <testArray.Length; i++)
+      if (testWord.ToUpper() == testArray[i].ToUpper()){
+        return true;
+      }
+      return false;
     }
-    public void UserWord (string enteredWord) {
-      _inputWord = enteredWord;
-    }
-    public string ReturnWord () {
-      return _inputWord;
-    }
-    public void UserSentence (string enteredSentence) {
-      _inputSentence = enteredSentence;
-    }
-    public string ReturnSentence () {
-      return _inputSentence;
-    }
-    public string[] SplitSentence () {
-      string[] arrayContent = _inputSentence.Split (' ');
-      return arrayContent;
-    }
-    public int userCount () {
-      string[] arrayContent = this.SplitSentence ();
+    public static int userCount (string inputWord, string inputSentence) {
+
+      string[] arrayContent = inputSentence.Split (' ');
       int arrayCount = 0;
-      foreach (string word in arrayContent)
-        arrayCount = (word.Equals (_inputWord) ? ++arrayCount : arrayCount);
+
+      for (int i = 0; i < arrayContent.Length; i++) 
+      {
+        if (inputWord.ToUpper() == arrayContent[i].ToUpper()) {
+          arrayCount += 1;
+        }
+      }
       return arrayCount;
     }
   }

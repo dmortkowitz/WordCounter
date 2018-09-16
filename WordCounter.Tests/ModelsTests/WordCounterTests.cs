@@ -1,34 +1,32 @@
 using System;
-using WordCounter.Models;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-namespace WordCounter.Models
+using WordCounter.Models;
+namespace WordCounter.Models 
 {
   [TestClass]
-    public class WordFinder
-    {
-    // test1
+  public class WordFinder 
+  {
+
     [TestMethod]
-    public void CheckWord_InputWord_String()
+    public void CheckWord_InputWord_String() 
     {
-    //Arrange
-    RepeatCounter userInput = new RepeatCounter("chewy", "chewy is a rambunctious dog");
-    //Act
-    string testWord = userInput.ReturnWord();
-    //Assert
-    Assert.AreEqual("chewy", testWord);
+
+      string inputWord = "chewy";
+      string inputSentence = "chewy is a bad dog";
+
+      Assert.AreEqual (true, RepeatCounter.wordChecker(inputWord, inputSentence));
     }
 
-    // test2
+  
     [TestMethod]
-    public void CheckCountk_ReturnCount_Int()
+    public void CheckCountk_ReturnCount_Int() 
     {
-    //Arrange
-    RepeatCounter userInput = new RepeatCounter("chewy", "chewy is a very chewy dog");
-    //Act
-    int inputCount = userInput.userCount();
-    //Assert
-    Assert.AreEqual(2, inputCount);
+
+      string inputWord = "Chewy";
+      string inputSentence = "Chewy is a good dog chewy";
+    
+      Assert.AreEqual (2, RepeatCounter.userCount (inputWord, inputSentence));
     }
   }
 }
