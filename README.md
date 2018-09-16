@@ -20,10 +20,11 @@ _This program should allow someone to enter a word, then enter a sentence, and r
 | :------------------------------------- | :--------- | :----- |
 | The dog ran by                         | dog        | 1      |
 | The first dog ran after the second dog | dog        | 2      |
-| When dog fights dog, every dog loses   | dog        | 3      | 
+| When dog fights dog, every dog loses   | dog        | 3      |
+| David loves dogs, Dogs, DOGS           | dogs       | 3      |
 ---
 
-_As the above example illustrates, it should count the word regardless of grammar or sentence length, given that it is an exact match (including matching capital letters) and the sentence is within a single string._
+_As the above example illustrates, it should count the word regardless of grammar or sentence length. New version also accounts for capital letters._
 
 ## Technologies used
 * C# 
