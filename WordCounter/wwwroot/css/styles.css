@@ -1,0 +1,12 @@
+//css
+.jumbotron {
+  text-align: center;
+  border-style: inset;
+}
+
+#wordResult {
+  margin-top: 20px;
+  padding-left: 15px;
+  padding-top: 20px;
+}
+
